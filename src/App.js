@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import MyCounter from './components/MyCounter';
+import IncreaseDecreaseCount from './components/IncreaseDecreaseCount';
+import UseEffectTitle from './components/UseEffectTitle';
+import Counter from './Counter';
+import CounterDisplay from './CounterDisplay';
+import { useState } from 'react';
+import ParentCounter from './ParentCounter';
+import MyProvider from './MyProvider';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <MyProvider>
+    <Counter/>
+    <ParentCounter/>
+    </MyProvider>
+    {/* <MyCounter/>
+    <IncreaseDecreaseCount/>
+      <UseEffectTitle/> */}
+    </>
   );
 }
 
