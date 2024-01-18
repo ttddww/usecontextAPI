@@ -10,5 +10,4 @@ function ParentCounter({ countData }) {
     </div>
   );
 }
-
 export default ParentCounter;
